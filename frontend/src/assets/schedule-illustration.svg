@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Calendar Background -->
+        <rect fill="#FFFFFF" x="100" y="50" width="600" height="500" rx="20"/>
+        <rect fill="#2196F3" x="100" y="50" width="600" height="100" rx="20"/>
+        
+        <!-- Calendar Days -->
+        <text font-family="Arial" font-size="24" font-weight="bold" fill="#FFFFFF">
+            <tspan x="150" y="110">Meeting Schedule</tspan>
+        </text>
+        
+        <!-- Calendar Grid -->
+        <g transform="translate(120,180)">
+            <!-- Grid Lines -->
+            <line x1="0" y1="0" x2="560" y2="0" stroke="#EEEEEE" stroke-width="2"/>
+            <line x1="0" y1="60" x2="560" y2="60" stroke="#EEEEEE" stroke-width="2"/>
+            <line x1="0" y1="120" x2="560" y2="120" stroke="#EEEEEE" stroke-width="2"/>
+            <line x1="0" y1="180" x2="560" y2="180" stroke="#EEEEEE" stroke-width="2"/>
+            
+            <!-- Meeting Blocks -->
+            <rect fill="#E3F2FD" x="20" y="20" width="200" height="40" rx="4"/>
+            <rect fill="#E3F2FD" x="240" y="80" width="280" height="40" rx="4"/>
+            <rect fill="#E3F2FD" x="40" y="140" width="180" height="40" rx="4"/>
+        </g>
+        
+        <!-- Decorative Elements -->
+        <circle fill="#64B5F6" cx="650" cy="100" r="20"/>
+        <circle fill="#90CAF9" cx="150" cy="500" r="30"/>
+        <circle fill="#BBDEFB" cx="700" cy="450" r="25"/>
+    </g>
+</svg>

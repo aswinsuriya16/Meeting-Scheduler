@@ -1,0 +1,214 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f0f2f5;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(217deg, rgba(33,150,243,.1), rgba(33,150,243,0) 70.71%),
+    linear-gradient(127deg, rgba(25,118,210,.1), rgba(25,118,210,0) 70.71%),
+    linear-gradient(336deg, rgba(13,71,161,.1), rgba(13,71,161,0) 70.71%);
+  z-index: -1;
+  animation: gradientShift 15s ease infinite;
+}
+
+.interactive-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.interactive-bg::before,
+.interactive-bg::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(33, 150, 243, 0.05);
+  animation: float 6s ease-in-out infinite;
+}
+
+.interactive-bg::before {
+  top: 10%;
+  left: 15%;
+  animation-delay: -2s;
+}
+
+.interactive-bg::after {
+  bottom: 15%;
+  right: 10%;
+  width: 400px;
+  height: 400px;
+  animation-delay: -4s;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Add subtle hover effects to buttons and inputs */
+button, 
+input[type="submit"],
+input[type="button"] {
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+}
+
+/* Add subtle hover effects to form fields */
+.MuiTextField-root {
+  transition: transform 0.2s ease !important;
+}
+
+.MuiTextField-root:hover {
+  transform: translateY(-2px) !important;
+}
+
+/* Add a subtle pulse animation to error messages */
+.error-message {
+  animation: errorPulse 2s ease infinite;
+}
+
+@keyframes errorPulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Add ripple effect to clickable elements */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.7) 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform 0.5s, opacity 1s;
+}
+
+.ripple:active::after {
+  transform: scale(0, 0);
+  opacity: 0.3;
+  transition: 0s;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
