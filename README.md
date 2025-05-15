@@ -1,7 +1,6 @@
 # Meeting Scheduler
 
-A modern meeting scheduling application built with Vite + React and MongoDB Atlas.
-
+A modern meeting scheduling application built with MERN stack.
 ## 📸 Demo
 
 ![Meeting Scheduler Demo](frontend/screenshot/screenshot.png)
