@@ -2,6 +2,11 @@
 
 A modern meeting scheduling application built with Vite + React and MongoDB Atlas.
 
+## 📸 Demo
+
+![Meeting Scheduler Demo](frontend/screenshot/screenshot.png)
+
+
 ## Features
 
 - Schedule new meetings with title, description, date, and time
